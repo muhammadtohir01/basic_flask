@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/about')
+@app.route('/')
 def hello_world():
     return "№ 1.\n\
 Manba: “Elektr zanjirlar nazariyasi” A.A. Tulyaganov, S.S. Parsiyev, V.A. Tulyaganova, A.M. Abdullayev. 2018.\
