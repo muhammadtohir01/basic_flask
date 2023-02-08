@@ -4,14 +4,14 @@ app = Flask(__name__)
 
 @app.route('/about')
 def hello_world():
-    return "№ 1.\
+    return "№ 1.\n\
 Manba: “Elektr zanjirlar nazariyasi” A.A. Tulyaganov, S.S. Parsiyev, V.A. Tulyaganova, A.M. Abdullayev. 2018.\
-Qiyinlik darajasi– 1\
+Qiyinlik darajasi– 1\n\
 Elektr zanjirda tok kuchining o‘lchov birligi nimada o‘lchanadi?\
 Amper\
 Volt\
 Vatt\
-Om\
+Om\n\
 № 2.\
 Manba: “Elektronika” X.K. Aripov, A.M. Abdullayev, N.B. Alimova, X.X. Bustanov, Ye.V. Obyedkov, Sh.T. Toshmatov. 2011.\
 Qiyinlik darajasi – 1\
@@ -20,7 +20,7 @@ bipolyar tranzistor\
 unipolyar tranzistor\
 Diod\
 stablitron\
-\
+\n\
 № 3.\
 Manba: “Elektronika” X.K. Aripov, A.M. Abdullayev, N.B. Alimova, X.X. Bustanov, Ye.V. Obyedkov, Sh.T. Toshmatov. 2011.\
 Qiyinlik darajasi – 1\
