@@ -1,35 +1,27 @@
-from flask import Flask
+from flask import Flask,request
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return "№ 1.\n\
-Manba: “Elektr zanjirlar nazariyasi” A.A. Tulyaganov, S.S. Parsiyev, V.A. Tulyaganova, A.M. Abdullayev. 2018.\
-Qiyinlik darajasi– 1\n\
-Elektr zanjirda tok kuchining o‘lchov birligi nimada o‘lchanadi?\
-Amper\
-Volt\
-Vatt\
-Om\n\
-№ 2.\
-Manba: “Elektronika” X.K. Aripov, A.M. Abdullayev, N.B. Alimova, X.X. Bustanov, Ye.V. Obyedkov, Sh.T. Toshmatov. 2011.\
-Qiyinlik darajasi – 1\
-Ikkita p-n o‘tishga va uchta elektrodga ega bo‘lgan, signallarni tok, kuchlanish va quvvat bo‘yicha kuchaytiruvchi yarimo‘tkazgichli asbob qanday ataladi?\
-bipolyar tranzistor\
-unipolyar tranzistor\
-Diod\
-stablitron\
-\n\
-№ 3.\
-Manba: “Elektronika” X.K. Aripov, A.M. Abdullayev, N.B. Alimova, X.X. Bustanov, Ye.V. Obyedkov, Sh.T. Toshmatov. 2011.\
-Qiyinlik darajasi – 1\
-Yuqori va o‘ta yuqori chastotali qurilmalarda ishlatish uchun mo‘ljallangan diodlar qanday nomlanadi?\
-yuqori chastotali diodlar\
-to‘g‘rilovchi diodlar\
-impulsli diodlar\
-tunelli diodlar\
-"
+@app.route('/',methods=['GET','POST'])
+# def hello_world():
+#     r=request.args
+#     name=r['name']
+#     data={
+#         'apple':2,
+#         'banana':4,
+#         'ananas':1
+#     }
+#     return {name:data.get(name,'not fonud')}
+@app.route('/get_sum')
+    
+def sum():
+    r=request.args
+    s=0
+    a=int(r['a'])
+    b=int(r['b'])
+    s=a+b
+    print(type(s))
+    return {'summa':s}
 if __name__ == '__main__':
     # Run the app in local network
     app.run()
